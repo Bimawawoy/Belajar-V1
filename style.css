@@ -1,0 +1,463 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@400;500;600&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+/* DEFAULT VALUES */
+.root {
+    color:#FF0000
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+nav {
+  user-select:none;
+  -webkit-user-select:none;
+  -moz-user-select:none;
+  -ms-user-select:none;
+  -o-user-select:none;
+}
+
+nav > ul,
+nav > ul > li {
+  outline: 0;
+}
+
+nav > ul > li > a {
+ text-decoration: none;
+}
+
+body {
+  min-height: 100vh;
+  background-color: #ffffff;
+  color: #ffffff;
+  font-size:16px:
+  
+}
+body {
+  /* Sesuaikan path gambar dengan lokasi file gambar Anda */
+      background-image: url('bg.jpg');
+      /* Atur properti background lainnya sesuai kebutuhan */
+      background-size: cover; /* Untuk menyesuaikan ukuran gambar dengan layar */
+      background-repeat: no-repeat;
+      background-position: center;
+      
+}
+
+
+
+/* MAIN MENU */
+
+.main-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 60px;
+  overflow: hidden;
+  background: #0009;
+  backdrop-filter: blur(5px);
+  transition: width .20s ease-in-out, transform .20s ease-in-out; /* Added transform transition */
+  -webkit-transition: width .20s ease-in-out, transform .20s ease-in-out; /* Added transform transition */
+  z-index: 10;
+  padding-top: 10px;
+  border-color: #FF0000;
+  border-radius: 25px;
+  border-style: solid;
+  filter: contrast(100%);
+}
+
+.main-menu:hover {
+  width: 180px;
+  overflow: hidden;
+  border-radius: 15px;
+  transform: translateY(0%); /* Added translateY on hover */
+  transition: width .05s ease-in-out, transform .20s ease-in-out; /* Added transform transition */
+  -webkit-transition: width .05s ease-in-out, transform .20s ease-in-out; /* Added transform transition */
+  filter: contrast(100%);
+  height: 100%;
+  
+}
+
+
+.main-menu > ul > li {
+  position: relative;
+  display: block;
+  width: 180px;
+}
+
+.main-menu > ul > li > a {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  color:#999;
+  font-size: 1rem;
+  transition:all .1s linear;
+  -webkit-transition:all .1s linear;
+  padding: 10px 0;
+}
+
+.nav-icon {
+  width: 60px;
+  height: 20px;
+  font-size: 20px;
+  text-align: center;
+}
+
+.nav-text {
+  width: 120px;
+  height: 20px;
+  font-family: "Mulish", sans-serif;
+  color:#ffffff;
+}
+
+
+.main-menu li:hover > a, .main-menu li.active > a, .main-menu li > a:focus {
+  text-decoration: none;
+  color: #FF0000;
+  background-color: rgba(173, 216, 230, 0.8);
+  border-radius:55px;
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+/* ANIMATED BACKGROUND */
+
+/* CARD */
+
+section {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 30px;
+  padding: 80px 40px 40px 80px;
+}
+
+.card {
+  width: min(100%, 500px);
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 16px;
+  font-family: "Poppins", sans-serif;
+  transition: transform 0.6s ease-in-out, border-color 0.3s ease-in-out;
+  transition-delay: 0.2s;
+  backdrop-filter: blur(5px);
+  user-select: none;
+  
+}
+
+.card > img {
+  display: block;
+  width: 100%;
+  max-width: 500px;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  object-position: 50% 50%;
+  border-radius: 16px 16px 0 0;
+  filter: contrast(100%);
+  transition: all 0.6s cubic-bezier(0.43, 0.41, 0.22, 0.91);
+}
+
+.card > img:hover {
+  filter: contrast(100%);
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.6s ease-in-out;
+  
+}
+
+.card:hover {
+  transform: scale(1.05); /* Sesuaikan dengan keinginan Anda */
+  border-radius:15px;
+  border-style:solid;
+  border-color:#FF0000;
+  filter: contrast(100%);
+}
+
+
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 15px 20px;
+  user-select: none;
+  font-size:1em;
+}
+
+.card-content > p {
+  margin-bottom: 10px;
+}
+
+.card-content > p:nth-child(1) {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #1e40af;
+}
+
+.card-content > p:nth-child(2) {
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: #6b7280;
+}
+
+@media (min-width: 1024px) {
+  section {
+     grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  section {
+     grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+#commission-button {
+    border-radius:25px;
+    border-style:solid;
+    border-color:#FF00FF;
+    background-color: #000000;
+  user-select: none;
+    
+}
+
+#commission-button:hover {
+    border-color:##FF0000;
+}
+
+
+#loading-screen {
+  background:#000000;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+#text-loader {
+    color:#ffffff;
+    align-items: center;
+    justify-content: center;
+}
+
+.loader {
+  border: 8px solid #f3f3f3;
+  border-top: 8px solid #ff00ff;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.hidden {
+  display: none;
+}
+
+@media (prefers-color-scheme: dark) {
+            body {
+                background-color: #333;
+                color: #fff;
+                
+            }
+            
+.slide-in {
+  animation: slideIn 1s ease-in-out;
+}
+
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+    filter: blur(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    filter:blur(0px);
+  }
+}
+
+.animated-border {
+  position: relative;
+  width: 200px;
+  height: 100px;
+  overflow: hidden;
+}
+
+.border {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  border: 2px solid transparent;
+  border-image: linear-gradient(90deg, #ff0, #f00, #00f, #0f0, #ff0) 10;
+  border-image-slice: 1;
+  animation: borderAnimation 5s linear infinite;
+}
+
+@keyframes borderAnimation {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+#headerr{
+  justify-content:center;
+  align-items:center;
+  display: flex;
+  user-select:none;
+}
+  
+.toast {
+    position: absolute;
+    top: 25px;
+    right: 30px;
+    border-radius: 12px;
+    background: #000000;
+    padding: 20px 35px 20px 25px;
+    box-shadow: 0 6px 20px -5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transform: translateX(calc(100% + 30px));
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.35);
+}
+
+.toast.active {
+    transform: translateX(0%);
+}
+
+.toast .toast-content {
+    display: flex;
+    align-items: center;
+}
+
+.toast-content .check {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 35px;
+    min-width: 35px;
+    background-color: #2770ff;
+    color: #fff;
+    font-size: 20px;
+    border-radius: 50%;
+}
+
+.toast-content .message {
+    display: flex;
+    flex-direction: column;
+    margin: 0 20px;
+}
+
+.message .text {
+    font-size: 16px;
+    font-weight: 400;
+    color: #ffffff;
+}
+
+.message .text.text-1 {
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.toast .close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    padding: 5px;
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+.toast .close:hover {
+    opacity: 1;
+}
+
+.toast .progress {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    width: 100%;
+
+}
+
+.toast .progress:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #2770ff;
+}
+
+.progress.active:before {
+    animation: progress 8s ease-in-out forwards;
+}
+
+@keyframes progress {
+    100% {
+        right: 100%;
+    }
+}
+button {
+    padding: 12px 20px;
+    font-size: 20px;
+    outline: none;
+    border: none;
+    background-color: #2770ff;
+    color: #fff;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #2770ff;
+}
+
+.toast.active~button {
+    pointer-events: none;
+}
+
+/*/sub menu element/*/
+.submenu {
+  display: none;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+}
+
+.submenu li {
+  margin-top: 5px;
+}
+
+.submenu li a {
+  display: block;
+  padding: 10px;
+  color: #fff;
+  text-decoration: none;
+}
+/*/ sub icon /*/
+.sub-icon {
+    font-size: 24px;
+      margin-right: 10px;
+}
+  
+  
